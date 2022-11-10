@@ -1,0 +1,30 @@
+{{#if student}}
+<style>
+    table, th, td{border: 1px solid;}
+</style>
+<h1>Student List</h1>
+<table>
+    <tr>
+        <th>Student Id</th>
+        <th>Name</th>
+        <th>Program</th>
+        <th>GPA</th>
+    </tr>
+    {{#each student}}
+        <tr>
+        <td>{{this.studId}}</td>
+        <td>{{this.name}}</td>
+        <td>{{this.program}}</td>
+        <td>{{this.gpa}}</td>
+    </tr>
+    {{/each}}
+</table>
+{{/if}}
+{{#if siglestudent}}
+<style>div{margin-bottom:20pt;}</style>
+<h1>Student Info</h1>
+<div>Student id: {{siglestudent.studId}}</div>
+<div>Student name: {{siglestudent.name}}</div>
+<div>Program: {{siglestudent.program}}</div>
+<div>GPA: {{siglestudent.gpa}}</div>
+{{/if}}
