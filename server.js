@@ -32,7 +32,7 @@ app.get("/",(req,res)=>{
 app.get("/CPA",(req,res)=>{
     data.cpa().then(result=>{
        
-        res.render("students",{student:result})
+        res.render("students",{students:result})
     },err=>{
         res.send(err)
     } )
@@ -41,7 +41,7 @@ app.get("/CPA",(req,res)=>{
 app.get("/highGPA",(req,res)=>{
    
     data.highGPA().then(result=>{
-        res.render("students",{siglestudent:result})
+        res.render("student",{siglestudent:result})
     },err=>{
         res.send(err)
     })
@@ -50,7 +50,7 @@ app.get("/highGPA",(req,res)=>{
 
 app.get("/allstudents",(req,res)=>{
     data.allStudents().then(result=>{
-        res.render("students",{student:result})
+        res.render("students",{students:result})
     },err=>{
         res.send(err)
     } )
@@ -62,7 +62,7 @@ app.get("/addStudent",(req,res)=>{
 
 app.post("/addStudent",(req,res)=>{
    data.addStudent(req.body).then( result=>{
-        res.render("students",{siglestudent:result})
+        res.render("student",{siglestudent:result})
    },err=>{
     res.send(err)
    } )
@@ -70,7 +70,7 @@ app.post("/addStudent",(req,res)=>{
 
 app.get('/student/:studId',(req,res)=>{
     data.getStudent(req.params.studId).then(result=>{
-        res.render("students",{siglestudent:result})
+        res.render("student",{siglestudent:result})
     },err=>{
         res.send(err)
     } )

@@ -1,4 +1,4 @@
-{{#if student}}
+{{#if students}}
 <style>
     table, th, td{border: 1px solid;}
 </style>
@@ -10,7 +10,7 @@
         <th>Program</th>
         <th>GPA</th>
     </tr>
-    {{#each student}}
+    {{#each students}}
         <tr>
         <td>{{this.studId}}</td>
         <td>{{this.name}}</td>
@@ -19,12 +19,4 @@
     </tr>
     {{/each}}
 </table>
-{{/if}}
-{{#if siglestudent}}
-<style>div{margin-bottom:20pt;}</style>
-<h1>Student Info</h1>
-<div>Student id: {{siglestudent.studId}}</div>
-<div>Student name: {{siglestudent.name}}</div>
-<div>Program: {{siglestudent.program}}</div>
-<div>GPA: {{siglestudent.gpa}}</div>
 {{/if}}
